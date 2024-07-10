@@ -3,6 +3,7 @@ import { Appbar } from "../components/Appbar"
 import { Balance } from "../components/Balance"
 import { Users } from "../components/Users"
 import axios from "axios"
+import { Logout } from "../components/Logout"
 
 export const Dashboard = () => {
   const [balance, setBalance] = useState("");
@@ -30,6 +31,7 @@ export const Dashboard = () => {
       <div className="m-8">
         <Balance value={balance} />
         <Users />
+        <Logout />
       </div>
     </div>
   )
