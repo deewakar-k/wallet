@@ -2,12 +2,12 @@
 export const Balance = ({value}) => {
   return (
     <div className="mt-5">
-      <div className="font-bold text-2xl">
+      <div className="font-primaryBold text-2xl">
         Balance
       </div>
-      <div className="font-light text-sm mt-4">
-        Available Now
-        <div className="font-bold text-lg mt-1">
+      <div className="font-primaryLight text-md mt-4">
+        AVAILABLE NOW
+        <div className="font-primaryMedium text-5xl mt-4">
           ${value}
         </div>
       </div>

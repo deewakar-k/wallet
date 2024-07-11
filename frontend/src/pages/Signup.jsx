@@ -17,21 +17,23 @@ export const Signup = () => {
   return (
     <div className="bg-[#EEEEEE] h-screen flex justify-center">
       <div className="flex flex-col justify-center" >
-        <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
+        <div className="rounded-lg bg-white w-80 text-center p-4 h-max px-6">
           <Heading label={"Sign up"} />
           <SubHeading label={"enter your information to create an account."} />
-          <InputBox onChange={(e) => {
-            setFirstName(e.target.value);
-          }} label={"First Name"} />
-          <InputBox onChange={(e) => {
-            setLastName(e.target.value);
-          }} label={"Last Name"} />
-          <InputBox onChange={(e) => {
-            setUsername(e.target.value);
-          }} label={"Email"} />
-          <InputBox onChange={(e) => {
-            setPassword(e.target.value);
-          }} label={"Password"} />
+          <div className="pt-4 pb-2">
+            <InputBox onChange={(e) => {
+              setFirstName(e.target.value);
+            }} label={"First Name"} />
+            <InputBox onChange={(e) => {
+              setLastName(e.target.value);
+            }} label={"Last Name"} />
+            <InputBox onChange={(e) => {
+              setUsername(e.target.value);
+            }} label={"Email"} />
+            <InputBox onChange={(e) => {
+              setPassword(e.target.value);
+            }} label={"Password"} />
+          </div>
           <div className="pt-4">
             <Button onClick={async () => {
               const response = await axios.post("http://localhost:3000/api/v1/user/signup", {

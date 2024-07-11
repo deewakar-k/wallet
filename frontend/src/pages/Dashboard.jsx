@@ -28,9 +28,13 @@ export const Dashboard = () => {
   return (
     <div>
       <Appbar />
-      <div className="m-8">
-        <Balance value={balance} />
-        <Users />
+      <div className="m-8 flex justify-between">
+        <div className="w-full w-1/2">
+          <Users />
+        </div>
+        <div className="w-full md:w-1/3 bg-white rounded-lg shadow-md p-6">
+          <Balance value={balance} />
+        </div>
         <Logout />
       </div>
     </div>
