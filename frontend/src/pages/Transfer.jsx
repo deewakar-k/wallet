@@ -11,27 +11,28 @@ export const Transfer = () => {
 
   return <div className="flex justify-center bg-[#eeeeee] h-screen">
     <div className="flex h-full flex-col justify-center">
-      <div className="bg-white border p-4 space-y-8 shadow-lg rounded-md w-96 max-w-md">
-        <div className="flex flex-col space-y-2 p-6">
-          <h2 className="text-3xl font-semibold text-center">Send Money</h2>
+      <div className="bg-white border p-4 space-y-4 shadow-lg rounded-md w-96 max-w-md">
+        <div className="flex flex-col space-y-2 p-3">
+          <h2 className="text-3xl font-primaryBold text-center">Send Money</h2>
+          <h3 className="font-primaryLight text-center"><span className="underline cursor-pointer">invite</span> friend's, and earn $5</h3>
         </div>
-        <div className="p-6">
+        <div className="p-4">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 rounded-full bg-[#6D9886] flex items-center justify-center">
-              <span className="text-2xl text-white">{name[0].toUpperCase()}</span>
+              <span className="text-2xl text-white font-primaryLight">{name[0]}</span>
             </div>
-            <h3 className="text-2xl font-semibold">{name}</h3>
+            <h3 className="text-2xl font-primaryMedium">{name}</h3>
           </div>
           <div className="space-y-4">
-            <div className="space-y-2">
-              <label className="text-sm font-semibold">
+            <div className="space-y-2 pt-4">
+              <label className="text-sm font-primaryMedium">
                 Amount (in $)
               </label>
               <input onChange={(e) => {
                 setAmount(e.target.value);
               }}
                 type="number"
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                className="flex h-10 w-full rounded-sm border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:border-[#6d9886]"
                 id="amount"
               />
             </div>
@@ -45,7 +46,7 @@ export const Transfer = () => {
                 }
               })
               navigate("/dashboard")
-            }} className="justify-center rounded-md text-sm font-medium ring-offset-background transition-colors h-10 px-4 py-2 w-full bg-[#6D9886] text-white">
+            }} className="justify-center rounded-md text-sm font-primaryMedium ring-offset-background transition-colors h-10 px-4 py-3 w-full bg-[#6D9886] text-white">
               Initiate Transfer
             </button>
           </div>

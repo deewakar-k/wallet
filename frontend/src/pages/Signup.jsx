@@ -6,6 +6,7 @@ import { InputBox } from "../components/InputBox"
 import { SubHeading } from "../components/SubHeading"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { PassInput } from "../components/PassInput"
 
 export const Signup = () => {
   const [username, setUsername] = useState("");
@@ -30,9 +31,9 @@ export const Signup = () => {
             <InputBox onChange={(e) => {
               setUsername(e.target.value);
             }} label={"Email"} />
-            <InputBox onChange={(e) => {
-              setPassword(e.target.value);
-            }} label={"Password"} />
+            <PassInput onChange={(e) => {
+              setPassword(e.target.value)
+            }} label={"Password"}/>
           </div>
           <div className="pt-4">
             <Button onClick={async () => {
